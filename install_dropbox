@@ -22,4 +22,7 @@ else
     wget -O - "https://www.dropbox.com/download?plat=lnx.x86" | tar zxf -
 fi
 popd
+mkdir -p ~/bin
+chmod +x ~/bin
+cp -f dropbox.py ~/bin
 ~/bin/dropbox.py autostart y
