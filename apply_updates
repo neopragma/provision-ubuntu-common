@@ -1,0 +1,17 @@
+#!/bin/bash
+#======================================================================================
+# Apply all available updates to an instance of Ubuntu.
+#
+# Arguments:
+# (none)		
+#
+# Version: 1.0.0
+# Date: 2014-01-03
+# Author: Dave Nicolette
+#======================================================================================
+echo
+echo '============================================================='
+echo 'Applying available updates...'
+
+sudo apt-get -y -f update
+sudo apt-get -y -f dist-upgrade

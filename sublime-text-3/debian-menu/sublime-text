@@ -1,0 +1,3 @@
+?package(sublime-text):needs="text" section="Applications/Editors" hints="Text" \
+  title="Sublime Text 3" command="/usr/bin/subl" \
+  icon="/opt/sublime_text/Icon/32x32/sublime-text.png"

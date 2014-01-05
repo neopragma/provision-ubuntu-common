@@ -1,0 +1,39 @@
+#!/bin/bash
+#======================================================================================
+# Remove packages from an instance of Xubuntu desktop 12.04.3 that aren't needed to set
+# up a software development environment.
+#		
+# Arguments:
+# (none)
+#
+# Version: 0.1.0
+# Date: 2014-01-03
+# Author: Dave Nicolette
+#======================================================================================
+echo
+echo '============================================================='
+echo 'Removing unnecessary packages...'
+
+sudo apt-get remove -y -f \
+    mahjongg \
+    aisleriot \
+    gnomine \
+    gnome-sudoku \
+    onboard \
+    leafpad \
+    orage \
+    gimp \
+    gthumb \
+    simple-scan \
+    pidgin \
+    thunderbird \
+    transmission \
+    xchat \
+    gmusicbrowser \
+    parole \
+    xfburn \
+    abiword \
+    dictionaries-common \
+    gnumeric \
+    gigolo \
+    xfce4-mailwatch-plugin
