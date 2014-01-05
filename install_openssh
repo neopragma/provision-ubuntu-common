@@ -1,0 +1,19 @@
+#!/bin/bash
+#======================================================================================
+# Install OpenSSH packages
+#
+# Arguments:
+# (None)		
+#
+# Version: 1.0.0
+# Date: 01-Jan-2014
+# Author: Dave Nicolette
+#======================================================================================
+
+echo
+echo '============================================================='
+echo 'Installing OpenSSH...'
+
+sudo apt-get -y -f install \
+    openssh-server \
+    openssh-client

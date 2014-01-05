@@ -1,0 +1,20 @@
+#!/bin/bash
+#======================================================================================
+# Install packages necessary to support building software for installation.
+#
+# Arguments:
+# (None)		
+#
+# Version: 1.0.0
+# Date: 01-Jan-2014
+# Author: Dave Nicolette
+#======================================================================================
+
+echo
+echo '============================================================='
+echo 'Installing packages for software installation and build support...'
+
+sudo apt-get -y -f install \
+    build-essential \
+    linux-headers-'uname -r' \
+    dkms 

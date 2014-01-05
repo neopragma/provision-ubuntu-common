@@ -1,0 +1,20 @@
+#!/bin/bash
+#======================================================================================
+# Install Epiphany browser and packages it requires
+#
+# Arguments:
+# (None)		
+#
+# Version: 1.0.0
+# Date: 01-Jan-2014
+# Author: Dave Nicolette
+#======================================================================================
+
+echo
+echo '============================================================='
+echo 'Installing web browser...'
+
+sudo apt-get -y -f install \
+    epiphany-browser \
+    epiphany-extensions \
+    gnome-icon-theme-symbolic

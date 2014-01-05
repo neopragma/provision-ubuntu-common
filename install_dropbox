@@ -1,0 +1,25 @@
+#!/bin/bash
+#======================================================================================
+# Install Dropbox client on an Ubuntu system.
+#
+# Arguments:
+# (None)		
+#
+# Version: 1.0.0
+# Date: 01-Jan-2014
+# Author: Dave Nicolette
+#======================================================================================
+
+echo
+echo '============================================================='
+echo 'Installing Dropbox client...'
+
+pushd ~
+MACHINE_TYPE=`uname -m`
+if [ ${MACHINE_TYPE} == 'x86_64' ]; then
+    wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar zxf -
+else
+    wget -O - "https://www.dropbox.com/download?plat=lnx.x86" | tar zxf -
+fi
+popd
+~/bin/dropbox.py autostart y

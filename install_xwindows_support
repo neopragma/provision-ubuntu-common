@@ -1,0 +1,20 @@
+#!/bin/bash
+#======================================================================================
+# Install basic X windows packages.
+#
+# Arguments:
+# (None)		
+#
+# Version: 1.0.0
+# Date: 01-Jan-2014
+# Author: Dave Nicolette
+#======================================================================================
+
+echo
+echo '============================================================='
+echo 'Installing packages for X windows support...'
+
+sudo apt-get -y -f install \
+    x11-xserver-utils \
+    xinit \
+    xterm
