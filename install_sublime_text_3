@@ -21,6 +21,14 @@ sudo apt-get -y -f install sublime-text-installer
 
 echo
 echo '============================================================='
+echo 'Adding Sublime Text 3 menu and desktop files...'
+
+sudo cp debian-menu/sublime-text /usr/share/menu/.
+sudo update-menus
+sudo cp "gnome-desktop/Sublime Text 3.desktop" /usr/share/applications/.
+
+echo
+echo '============================================================='
 echo 'Copying Sublime Text 3 user preference files...'
 
 cp -a sublime-text-3/config/* "$HOME/.config/sublime-text-3/Packages/User"
