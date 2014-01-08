@@ -1,0 +1,17 @@
+#!/bin/bash
+#======================================================================================
+# Install Midori browser and packages it requires
+#
+# Arguments:
+# (None)		
+#
+# Version: 1.0.0
+# Date: 07-Jan-2014
+# Author: Dave Nicolette
+#======================================================================================
+
+echo
+echo '============================================================='
+echo 'Installing Midori web browser...'
+
+sudo apt-get -y -f install midori
