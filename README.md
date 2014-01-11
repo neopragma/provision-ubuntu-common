@@ -17,3 +17,4 @@ Common scripts and configuration files used in more than one Ubuntu configuratio
 * xubuntu_cleanup - removes some of the packages that are included in the Xubuntu Desktop distro.
 * LICENSE
 * README.md
+* sublime-text-3/ - config files that are copied or merged after the basic install of Sublime Text 3
