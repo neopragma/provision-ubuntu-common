@@ -1,0 +1,18 @@
+#!/bin/bash
+#======================================================================================
+# Disable apport so that bogus crash report dialogs will not be displayed.
+#
+# Arguments:
+# (None)		
+#
+# Version: 1.0.0
+# Date: 11-Jan-2014
+# Author: Dave Nicolette
+#======================================================================================
+
+pushd /etc/default
+sudo cp apport apport-orig
+sudo bash -c "sed -e 's/enabled=1/enabled=0/g' apport > apport2"
+sudo rm apport
+sudo mv apport2 apport
+popd
