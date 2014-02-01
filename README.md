@@ -5,6 +5,7 @@ Common scripts and configuration files used in more than one Ubuntu configuratio
 ## Contents
 
 * apply_updates - bring the installed system up to date.
+* disable_crash_reports - set enabled=0 in /etc/default/apport to suppress bogus crash report notifications.
 * dropbox.py - Dropbox client script to be copied to the installed system.
 * install_build_support - packages needed to compile and make.
 * install_dropbox - install Dropbox daemon.
