@@ -18,12 +18,12 @@ pushd ~/Downloads
 
 MACHINE_TYPE=`uname -m`
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
-    wget -O - "wget -O eclipse.tar.gz https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/kepler/M6/eclipse-jee-kepler-M6-linux-gtk-x86_64.tar.gz" | tar zxf -
+    wget -O eclipse.tar.gz https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/kepler/M6/eclipse-jee-kepler-M6-linux-gtk-x86_64.tar.gz
 else
-    wget -O - "wget -O eclipse.tar.gz https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/kepler/M6/eclipse-jee-kepler-M6-linux-gtk.tar.gz" | tar zxf -
+    wget -O eclipse.tar.gz https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/kepler/M6/eclipse-jee-kepler-M6-linux-gtk.tar.gz
 fi
 
-xfz eclipse.tar.gz
+tar -xzf eclipse.tar.gz
 sudo mv eclipse /opt
 
 popd
