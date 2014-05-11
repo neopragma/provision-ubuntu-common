@@ -2,7 +2,7 @@
 Encoding=UTF-8
 Name=Eclipse
 Comment=Eclipse IDE
-Exec=eclipse
+Exec=env UBUNTU_MENUPROXY= eclipse
 Icon=/opt/eclipse/icon.xpm
 Terminal=false
 Type=Application
