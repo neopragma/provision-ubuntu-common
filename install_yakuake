@@ -1,0 +1,17 @@
+#!/bin/bash
+#======================================================================================
+# Install yakuake - drop-down command shell
+#
+# Arguments:
+# (None)		
+#
+# Version: 1.0.0
+# Date: 18 May 2014
+# Author: Dave Nicolette
+#======================================================================================
+
+echo
+echo '============================================================='
+echo 'Installing Yakuake...'
+
+sudo apt-get -y -f install yakuake
