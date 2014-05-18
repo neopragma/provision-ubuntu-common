@@ -13,6 +13,8 @@ Common scripts and configuration files used in more than one Ubuntu configuratio
 * install_midori_browser - installs Midori web browser and its dependencies.
 * install_openssh - installs OpenSSH client and server packages.
 * install_sublime_text_3 - installs and configures Sublime Text 3.
+* install_vmware - installs VMware Player.
+* install_yed - installs yEd diagramming tool.
 * install_xwindows_support - installs X Windows packages.
 * ubuntu_update - applies all available updates to the instance.
 * xubuntu_cleanup - removes some of the packages that are included in the Xubuntu Desktop distro.
