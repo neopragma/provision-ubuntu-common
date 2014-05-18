@@ -1,0 +1,26 @@
+#!/bin/bash
+#======================================================================================
+# Install VMware Player.
+#
+# Arguments:
+# (None)		
+#
+# Version: 1.0.0
+# Date: 18-May-2014
+# Author: Dave Nicolette
+#======================================================================================
+echo
+echo '============================================================='
+echo 'Installing VMware Player 6.0.2...'
+
+mkdir -p ~/vmware-install
+pushd vmware-install
+MACHINE_TYPE=`uname -m`
+if [ ${MACHINE_TYPE} == 'x86_64' ]; then
+    wget -c http://download3.vmware.com/software/player/file/VMware-Player-6.0.2-1744117.x86_64.bundle -O VMware-Player-6.0.2-1744117.x86_64.bundle
+else
+    wget -c http://download3.vmware.com/software/player/file/VMware-Player-6.0.2-1744117.x86_64.bundle -O VMware-Player-6.0.2-1744117.x86.bundle
+fi
+chmod +x *.bundle
+sudo sh *.bundle
+popd
