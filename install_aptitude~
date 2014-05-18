@@ -1,0 +1,17 @@
+#!/bin/bash
+#======================================================================================
+# Install Microsoft Core TrueType Fonts
+#
+# Arguments:
+# (None)		
+#
+# Version: 1.0.0
+# Date: 15-May-2014
+# Author: Dave Nicolette
+#======================================================================================
+
+echo
+echo '============================================================='
+echo 'Installing Microsoft TrueType Core fonts...'
+
+sudo apt-get -y -f install ttf-mscorefonts-installer

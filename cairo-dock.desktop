@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Cairo Dock
+Exec=cairo-dock
+X-GNOME-Autostart-enabled=true
