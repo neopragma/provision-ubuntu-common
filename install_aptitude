@@ -1,0 +1,17 @@
+#!/bin/bash
+#======================================================================================
+# Install Aptitude package manager
+#
+# Arguments:
+# (None)		
+#
+# Version: 1.0.0
+# Date: 18 May 2014
+# Author: Dave Nicolette
+#======================================================================================
+
+echo
+echo '============================================================='
+echo 'Installing Aptitude...'
+
+sudo apt-get -y -f install aptitude
