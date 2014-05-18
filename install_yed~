@@ -1,0 +1,25 @@
+#!/bin/bash
+#======================================================================================
+# Install yEd
+#
+# Arguments:
+# (None)		
+#
+# Version: 1.0.0
+# Date: 18-May-2014
+# Author: Dave Nicolette
+#======================================================================================
+echo
+echo '============================================================='
+echo 'Installing yEd...'
+
+mkdir -p ~/yed-install
+pushd yed-install
+MACHINE_TYPE=`uname -m`
+if [ ${MACHINE_TYPE} == 'x86_64' ]; then
+    wget -c http://www.yworks.com/products/yed/demo/yEd-3.12.2_64-bit_setup.sh -O yed_setup.sh
+else
+    wget -c http://www.yworks.com/products/yed/demo/yEd-3.12.2_32-bit_setup.sh -O yed_setup.sh
+fi
+sudo sh yed_setup.sh
+popd
