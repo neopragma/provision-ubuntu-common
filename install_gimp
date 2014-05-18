@@ -1,17 +1,17 @@
 #!/bin/bash
 #======================================================================================
-# Install Midori browser and packages it requires
+# Install Gimp
 #
 # Arguments:
 # (None)		
 #
 # Version: 1.0.0
-# Date: 07-Jan-2014
+# Date: 18 May 2014
 # Author: Dave Nicolette
 #======================================================================================
 
 echo
 echo '============================================================='
-echo 'Installing Midori web browser...'
+echo 'Installing Gimp...'
 
-sudo apt-get -y -f install midori
+sudo apt-get -y -f install gimp
