@@ -1,0 +1,17 @@
+#!/bin/bash
+#===============================================================================
+# Tweaks to enhance the experience of using the Ubuntu desktop.
+#
+# Version: 1.0.0 
+# Date: 18 May 2014
+# Author: Dave Nicolette
+#===============================================================================
+
+# Suppress bogus crash reports
+sudo echo 'enabled=0' > /etc/default/apport
+
+# Get rid of annoying floating scrollbar
+gsettings set com.canonical.desktop.interface scrollbar-mode normal
+
+# Display username on top panel
+gsettings set com.canonical.indicator.session show-real-name-on-panel true

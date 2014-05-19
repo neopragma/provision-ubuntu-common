@@ -16,6 +16,7 @@ Common scripts and configuration files used in more than one Ubuntu configuratio
 * install_vmware - installs VMware Player.
 * install_yed - installs yEd diagramming tool.
 * install_xwindows_support - installs X Windows packages.
+* ubuntu_desktop_tweaks - usability enhancements for Ubuntu desktop.
 * ubuntu_update - applies all available updates to the instance.
 * xubuntu_cleanup - removes some of the packages that are included in the Xubuntu Desktop distro.
 * LICENSE
