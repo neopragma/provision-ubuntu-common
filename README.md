@@ -7,7 +7,9 @@ Common scripts and configuration files used in more than one Ubuntu configuratio
 * apply_updates - bring the installed system up to date.
 * disable_crash_reports - set enabled=0 in /etc/default/apport to suppress bogus crash report notifications.
 * dropbox.py - Dropbox client script to be copied to the installed system.
+* install_aptitude - package manager convenience.
 * install_build_support - packages needed to compile and make.
+* install_curl - utility to get/put files via HTTP.
 * install_dropbox - install Dropbox daemon.
 * install_epiphany_browser - installs Epiphany web browser and its dependencies.
 * install_midori_browser - installs Midori web browser and its dependencies.
