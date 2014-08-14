@@ -1,0 +1,2 @@
+# source the rvm script
+source "$HOME/.rvm/scripts/rvm"

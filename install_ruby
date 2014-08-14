@@ -21,3 +21,13 @@ echo 'source "$HOME/.rvm/scripts/rvm"' >> .bashrc
 rvm --default use 2.1.1
 gem install bundler
 popd
+
+if [[ -z ~/bin ]]; then
+	pushd ~
+    mkdir -p bin
+    echo "export PATH=~/bin:$PATH" >> .bashrc
+    . .bashrc
+    popd
+    cp fixrvm "$HOME/bin"
+    chmod +x "$HOME/bin/fixrvm"
+fi    
