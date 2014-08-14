@@ -8,12 +8,17 @@ Common scripts and configuration files used in more than one Ubuntu configuratio
 * disable_crash_reports - set enabled=0 in /etc/default/apport to suppress bogus crash report notifications.
 * dropbox.py - Dropbox client script to be copied to the installed system.
 * install_aptitude - package manager convenience.
+* install_argouml - installs ArgoUML UML diagram editor.
 * install_build_support - packages needed to compile and make.
 * install_curl - utility to get/put files via HTTP.
 * install_dropbox - install Dropbox daemon.
 * install_epiphany_browser - installs Epiphany web browser and its dependencies.
+* install_java7 - installs OpenJDK 7.
+* install_java8 - installs Oracle Java 8.
+* install_maven - installs Maven build tool and dependency manager for Java.
 * install_midori_browser - installs Midori web browser and its dependencies.
 * install_openssh - installs OpenSSH client and server packages.
+* install_ruby - installs RVM, Ruby, and Bundler.
 * install_sublime_text_3 - installs and configures Sublime Text 3.
 * install_vmware - installs VMware Player.
 * install_yed - installs yEd diagramming tool.

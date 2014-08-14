@@ -1,0 +1,23 @@
+#!/bin/bash
+#======================================================================================
+# Install Ruby and friends
+#
+# Arguments:
+# (None)		
+#
+# Version: 1.0.0
+# Date: 12 Aug 2014
+# Author: Dave Nicolette
+#======================================================================================
+
+echo
+echo '============================================================='
+echo 'Installing Ruby...'
+
+pushd "$HOME"
+\curl -sSL https://get.rvm.io | bash -s stable --ruby=2.1
+echo 'source "$HOME/.rvm/scripts/rvm"' >> .bashrc
+. .bashrc
+rvm --default use 2.1.1
+gem install bundler
+popd
