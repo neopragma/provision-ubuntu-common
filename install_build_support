@@ -16,5 +16,5 @@ echo 'Installing packages for software installation and build support...'
 
 sudo apt-get -y -f install \
     build-essential \
-    linux-headers-'uname -r' \
+    linux-headers-$(uname -r) \
     dkms 

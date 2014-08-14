@@ -12,6 +12,7 @@ Common scripts and configuration files used in more than one Ubuntu configuratio
 * install_build_support - packages needed to compile and make.
 * install_curl - utility to get/put files via HTTP.
 * install_dropbox - install Dropbox daemon.
+* install_eclipse - install Eclipse IDE.
 * install_epiphany_browser - installs Epiphany web browser and its dependencies.
 * install_java7 - installs OpenJDK 7.
 * install_java8 - installs Oracle Java 8.
