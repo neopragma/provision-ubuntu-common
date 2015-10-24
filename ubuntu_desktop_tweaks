@@ -2,8 +2,8 @@
 #===============================================================================
 # Tweaks to enhance the experience of using the Ubuntu desktop.
 #
-# Version: 1.0.0 
-# Date: 18 May 2014
+# Version: 1.1.0 
+# Date: 24 Oct 2015
 # Author: Dave Nicolette
 #===============================================================================
 
@@ -15,3 +15,7 @@ gsettings set com.canonical.desktop.interface scrollbar-mode normal
 
 # Display username on top panel
 gsettings set com.canonical.indicator.session show-real-name-on-panel true
+
+# Display application menus in the application window
+gsettings set com.canonical.indicator.appmenu menu-mode locally-integrated
+
