@@ -8,7 +8,7 @@
 #===============================================================================
 
 # Suppress bogus crash reports
-sudo echo 'enabled=0' > /etc/default/apport
+sudo bash -c 'echo "enabled=0" > /etc/default/apport'
 
 # Get rid of annoying floating scrollbar
 gsettings set com.canonical.desktop.interface scrollbar-mode normal
