@@ -1,0 +1,28 @@
+#!/bin/bash
+#======================================================================================
+# Create $HOME/bin directory and ensure it is executable
+# HOME_DIR variable must be set to the path of the home bin directory
+#
+# Arguments:
+# (None)		
+#
+# Version: 1.0.0
+# Date: 02 Dec 2016
+# Author: Dave Nicolette
+#======================================================================================
+
+echo
+echo '============================================================='
+echo "Verifying $HOME_BIN exists and is executable..."
+
+if [ -d "$HOME_BIN" ]; then
+    echo "$HOME_BIN exists"    
+    if [ -x "$HOME_BIN" ]; then
+        echo "$HOME_BIN is executable"
+    else
+        chmod a+x "$HOME_BIN"    
+    fi
+else
+    mkdir -p "$HOME_BIN"
+    chmod a+x "$HOME_BIN"
+fi

@@ -1,0 +1,21 @@
+#!/bin/bash
+#======================================================================================
+# Install wget
+#
+# Arguments:
+# (None)		
+#
+# Version: 1.0.0
+# Date: 02 Dec 2016
+# Author: Dave Nicolette
+#======================================================================================
+
+echo
+echo '============================================================='
+echo "Verifying wget is installed..."
+
+if [ "$(dpkg -l | grep wget)" ]; then
+    echo 'wget is installed'
+else
+    sudo apt install -y -f wget
+fi

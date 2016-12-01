@@ -1,0 +1,74 @@
+#!/bin/bash
+#======================================================================================
+# Install Nexus OSS server
+# NEXUS_HOME must be set
+#
+# Arguments:
+# (None)		
+#
+# Version: 1.0.0
+# Date: 02 Dec 2016
+# Author: Dave Nicolette
+#======================================================================================
+
+DOWNLOAD_URL=http://download.sonatype.com/nexus/3/latest-unix.tar.gz
+
+echo
+echo '============================================================='
+echo 'Verifying Nexus OSS server is installed...'
+
+if [ -z ${NEXUS_HOME+x} ]; then
+	echo 'Please set the NEXUS_HOME variable and try again.'
+	exit 1
+fi
+
+    if [ "$(which nexus)" ]; then
+	    echo 'Nexus OSS appears to be installed already'
+else	
+	echo 'Installing Nexus OSS'
+    mkdir -p "$NEXUS_HOME"
+	pushd "$NEXUS_HOME"
+	wget -O nexus.tar.gz "$DOWNLOAD_URL"
+	if ! tar tf nexus.tar.gz &> /dev/null; then
+	    echo "Nexus distribution archive was not downloaded correctly."
+	    echo "URL: $DOWNLOAD_URL"
+	    echo '=== ABORTING ==='
+	    echo ' '
+	    exit 1
+	fi
+	tar xzf nexus.tar.gz
+	NEXUS_DIR="$(ls -d nexus*/)"
+
+    echo "NEXUS_DIR is $NEXUS_DIR"
+
+
+	if [ ! -x "$NEXUS_HOME/$NEXUS_DIR/bin/nexus" ]; then
+        echo "$NEXUS_HOME/$NEXUS_DIR/bin/nexus does not exist or is not executable"
+        echo "The installation does not appear to have completed correctly"
+        echo "Please investigate"
+        echo '=== ABORTING ==='
+        exit 1
+    fi    
+    ln -s "$NEXUS_HOME/$NEXUS_DIR/bin/nexus" "$HOME/bin/nexus"
+    if [ "$(which nexus)" ]; then
+    	echo "Nexus is on the path"
+    else
+        echo "Nexus is not on the path"	
+        echo "The installation does not appear to have completed correctly"
+        echo "Please investigate"
+        echo '=== ABORTING ==='
+        exit 1
+    fi
+    if [ "$(nexus status)" == 'nexus is stopped.' ]; then
+    	echo "Nexus appears to be installed correctly"
+    else
+    	echo "Nexus does not respond to 'nexus status'"
+        echo "The installation does not appear to have completed correctly"
+        echo "Please investigate"
+        echo '=== ABORTING ==='
+        exit 1
+    fi    	
+    echo 'See Nexus documentation at https://books.sonatype.com/nexus-book/reference3/'
+	popd
+#fi
+
